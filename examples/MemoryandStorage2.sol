@@ -8,6 +8,8 @@ contract MemoryandStorage {
         uint id;
         uint balance;
     }
+    
+    
     constructor () public {
     }
     
@@ -15,7 +17,7 @@ contract MemoryandStorage {
         users[id] = User(id,balance);
     }
     
-    function updateBalance(uint id) public view {
+    function updateBalance(uint _id, uint _balance) public view {
         User storage _user = users[id];
         _user.balance = balance;
     }
@@ -24,3 +26,5 @@ contract MemoryandStorage {
         return users[id].balance;
     }
 }
+
+

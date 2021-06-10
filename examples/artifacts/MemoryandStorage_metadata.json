@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"name": "updateBalance",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"name": "_balance",
+						"type": "uint256"
+					}
+				],
+				"name": "addUser",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MemoryandStorage.sol": "MemoryandStorage"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"MemoryandStorage.sol": {
+			"keccak256": "0x1206ee628584726224cc13ac7933b73e85e12e383fdb6ce2ed869abdebf06478",
+			"urls": [
+				"bzzr://0eb4ef95525c01a485ff14c3190f4abe9a68bedd2ce8f4e5d109ebd466ff59b1"
+			]
+		}
+	},
+	"version": 1
+}

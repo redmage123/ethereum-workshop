@@ -1,4 +1,4 @@
-pragma solidity ^0.5.9; 
+pragma solidity ^0.5.9;
 // Imagine a big integer that the whole world could share
 contract SimpleStorage {
     uint storedData;
@@ -12,7 +12,8 @@ contract SimpleStorage {
     }
     
     function increment (uint n) public {
-        storedData = storedData + n;
+    //    storedData = storedData + n;
+        storedData += n;
         return;
     }
     

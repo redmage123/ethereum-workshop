@@ -1,4 +1,4 @@
-pregma solidity ^0.4.0;
+pragma solidity ^0.4.0;
 
 /* This code has a bug in it*/
 
@@ -11,11 +11,11 @@ contract MemoryandStorage {
     constructor () public {
     }
     
-    function addUser(uint id, uint balance) {
-        users[id] = User(id,balance);
+    function addUser(uint _id, uint _balance) public {
+        users[_id] = User(_id,_balance);
     }
     
-    function updateBalance(uint id) public view {
+    function updateBalance(uint id,uint balance) public view {
         User memory _user = users[id];
         _user.balance = balance;
     }

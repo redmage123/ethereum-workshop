@@ -33,7 +33,8 @@ contract Ballot {
         voters[chairperson].weight = 2; // weight is 2 for testing purposes
         proposals.length = _numProposals;
         stage = Stage.Reg;
-        startTime = now;
+        startTime = now; // This is an synonym for block.startTime
+        // startTime = block.startTime;
     }
 
     /// Give $(toVoter) the right to vote on this ballot.
@@ -43,7 +44,14 @@ contract Ballot {
         if (msg.sender != chairperson || voters[toVoter].voted) return;
         voters[toVoter].weight = 1;
         voters[toVoter].voted = false;
-        if (now > (startTime+ 30 seconds)) {stage = Stage.Vote; }        
+        if (now > (startTime+ 30 seconds)) {stage = Stage.Vote; }
+        /* Using time units in solidity, we have things like:
+           seconds
+           minutes
+           hours
+           days
+           ...
+          */
     }
 
     /// Give a single vote to proposal $(toProposal).
