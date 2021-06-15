@@ -87,9 +87,12 @@ contract OrderBook {
 
     function executeOrder(address payable _seller, stockToken _s, uint _amount, uint _price) public payable {
         uint totalEtherAmount = _amount * _price;
-        uint totalStockAmount = _amount/_price;  // This is bad.  Should be fixed point, not decimal.
+        uint stockAmountToTransfer = _amount/_price;  // This is bad.  Should be fixed point, not decimal.
         _seller.transfer(totalEtherAmount);
-        userMap[_seller].s.transfer(msg.sender,totalStockAmount);
+        userMap[msg.sender].etherBalance-= totalEtherAmount;
+        userMap[msg.sender].stockAmount += stockAmountToTransfer;
+        userMap[_seller].etherBalance += totalEtherAmount;
+        userMap[_seller].s.transfer(msg.sender,stockAmountToTransfer);
     }
     
 }
