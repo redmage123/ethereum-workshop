@@ -31,7 +31,7 @@ var txValue = web3.utils.numberToHex(web3.utils.toWei('1', 'ether'));
 var txData = web3.utils.asciiToHex('Test transaction.'); 
 
 var rawTx = {
-  nonce: '0x1', // Nonce is the times the address has transacted, should always be higher than the last nonce 0x0#
+  nonce: '0x3', // Nonce is the times the address has transacted, should always be higher than the last nonce 0x0#
   gasPrice: '0x14f46b0400', // Normal is '0x14f46b0400' or 90 GWei
   gasLimit: '0x55f0', // Limit to be used by the transaction, default is '0x55f0' or 22000 GWei
   to: receivingAddr, // The receiving address of this transaction

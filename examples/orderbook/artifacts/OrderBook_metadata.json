@@ -1,0 +1,388 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "registerAskOrderEvent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "registerBidOrderEvent",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_uid",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "addStock",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "askOrderMap",
+				"outputs": [
+					{
+						"internalType": "contract stockToken",
+						"name": "s",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bidOrderMap",
+				"outputs": [
+					{
+						"internalType": "contract stockToken",
+						"name": "s",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_seller",
+						"type": "address"
+					},
+					{
+						"internalType": "contract stockToken",
+						"name": "_s",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "executeOrder",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_useraddr",
+						"type": "address"
+					}
+				],
+				"name": "getUser",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "etherBalance",
+								"type": "uint256"
+							},
+							{
+								"internalType": "contract stockToken",
+								"name": "s",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "stockAmount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct OrderBook.User",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_oid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract stockToken",
+						"name": "_s",
+						"type": "address"
+					}
+				],
+				"name": "registerAskOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_oid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract stockToken",
+						"name": "_s",
+						"type": "address"
+					}
+				],
+				"name": "registerBidOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_userName",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_uid",
+						"type": "address"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "userMap",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "etherBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract stockToken",
+						"name": "s",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "stockAmount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"orderbook/OrderBook.sol": "OrderBook"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0xfeccdcbf67b2006a715e5af1a4c7556004d95b2806552b5cc54e46e8eb7e887b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://45b1f9043c0fb450272f20ed19ef633fcba1b129d602651a856dfae1a2243a2c",
+				"dweb:/ipfs/QmUTSQiDikkcNtTtyDpkEwCM5ztVUUh9c1inBukn6HC5Vr"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xf8e8d118a7a8b2e134181f7da655f6266aa3a0f9134b2605747139fcb0c5d835",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9ec48567e7ad06acb670980d5cdf3fd7f3949bf12894f02d68c3bb43e75aa84f",
+				"dweb:/ipfs/QmaG3R2J9cz92YT77vFjYrjMNU2wHp4ypwYD62HqDUqS5U"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+			"keccak256": "0x83fe24f5c04a56091e50f4a345ff504c8bff658a76d4c43b16878c8f940c53b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4c3df1a7ca104b633a7d81c6c6f5192367d150cd5a32cba81f7f27012729013",
+				"dweb:/ipfs/QmSim72e3ZVsfgZt8UceCvbiSuMRHR6WDsiamqNzZahGSY"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xf930d2df426bfcfc1f7415be724f04081c96f4fb9ec8d0e3a521c07692dface0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc2bfdea0d2562c76fb3c4cf70a86c6ba25c5a30e8f8515c95aafdf8383f8395",
+				"dweb:/ipfs/QmTbFya18786ckJfLYUoWau9jBTKfmWnWm5XSViWvB7PXN"
+			]
+		},
+		"orderbook/OrderBook.sol": {
+			"keccak256": "0x23380070f60680abefe280c7c0bd67c1670c50041ccc3ab69a75900734b335fd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a364949eacd7e5b94710357823d7ef866c9b16ebee40b83591a80572296e980",
+				"dweb:/ipfs/QmeK4foA5miznXwFG474vUhLX595fPCUqbh8gjzpJnWbSa"
+			]
+		},
+		"orderbook/StockToken.sol": {
+			"keccak256": "0x8ea14175a93267a9f9afe3bb2840f282863cc37c4e2eed5b4ef35c4eb55fa6f5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b8915c319cfe1fe29063b0cda3b23f25c2cd563737d3b9841eadb3486378fa3",
+				"dweb:/ipfs/QmNpvgedtzGrR4j16e7aSNUCqCxeecwaq4Uk2hW875eFcr"
+			]
+		}
+	},
+	"version": 1
+}

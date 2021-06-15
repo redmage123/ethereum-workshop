@@ -1,0 +1,68 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "testTransfer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"testtransaction.sol": "testContract"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"testtransaction.sol": {
+			"keccak256": "0x26e8257472352f509aa9d87487c7619d842b6e04643f3f852652bb61380a5840",
+			"urls": [
+				"bzz-raw://b842cd7308973ee2d7a157c606d2d22e237b92a4512911e44727c849d6bb7ea7",
+				"dweb:/ipfs/QmXkf5rLp2CBaWEPGwv537uHdwTASLdAdbZqAwFzJ25Xuo"
+			]
+		}
+	},
+	"version": 1
+}
